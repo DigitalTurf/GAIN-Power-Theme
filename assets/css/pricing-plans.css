@@ -1,0 +1,19 @@
+@media (min-width: 992px){
+
+    body.page-id-11 .col-md-12{
+        width: 100%;
+        margin-left: 0;
+    }
+    body.page-id-11 .page-inner-container.lp_hide_general_plans,
+    body.page-id-11 .lp_plan_result_section {
+      display: flex;
+      justify-content: space-between;
+    }
+    body.page-id-11 .col-md-4 {
+        width: 33%;
+    }
+    body.page-id-11 .col-md-4:nth-child(2) {
+        margin: 0px 20px;
+    }
+
+}

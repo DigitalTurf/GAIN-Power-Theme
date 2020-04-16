@@ -1,0 +1,88 @@
+@import 'variables';
+
+/*********************
+ *** COOKIE NOTICE ***
+ *********************/
+
+ #modal-packages {
+   .lp-change-plan-popup {
+     margin: 100px auto;
+    p {
+       font-size: 14px;
+       &.lp-change-plan-btnn {
+         text-align: center;
+         .lp-change-proceed-link {
+           font-weight: bold;
+         }
+       }
+     }
+     .modal-body {
+       margin: 0px;
+       .lp-existing-plane-container {
+         .lp-selected-plan-features {
+           padding-top: 0px;
+         }
+         .lp-selected-plan-price {
+           text-align: center;
+           h4 {
+             font-size: 14px;
+           }
+         }
+       }
+
+       .lp-new-plane-container .lp-selected-plan-features {
+         padding: 15px 0px;
+         label.plan-options {
+           margin: 0px;
+         }
+         .radio.radio-danger {
+           border: 1px solid #ccc;
+         }
+         input[type="radio"] + label::before {
+           top: 0px;
+           background-color: #fff;
+         }
+         input[type="radio"]:checked + label::before {
+           background-color: $maroon;
+         }
+         .selected-plane-price-features {
+           padding-left: 32px;
+           li {
+             margin-right: 7px;
+             padding-right: 9px;
+             top: 0px;
+             &::after {
+               font-size: 20px;
+               color: #ccc;
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+
+#cookie-notice {
+  #cn-notice-text {
+    color: $white;
+  }
+  #cn-notice-buttons {
+    display: block;
+    a {
+      @include border-radius(5px);
+      line-height: 1em;
+      margin-top: 6px;
+      background-color: $white;
+      color: $maroon;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 2px 6px;
+      border: 1px solid $white;
+      &:hover {
+        background-color: $maroon;
+        color: $white;
+        border: 1px solid $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.activity-link-preview-container .activity-link-preview-image{
+    max-width: 100%;
+    float: none;
+    margin: 0px;
+}
+.activity-link-preview-excerpt p.activity-link-preview-title{
+    margin-bottom: 5px;
+    color: #A62A59;
+    font-weight: 600;
+}
+.activity-link-preview-excerpt p.activity-link-preview-description{
+    margin-bottom: 0px;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+}
+.activity-link-preview-excerpt p.activity-link-url{
+    font-size: 12px;
+    margin-bottom: 0px;
+    color: #A62A59;
+    line-height: 1.3;
+}
+.activity-link-preview-excerpt{
+    padding: 5px;
+    background-color: #F2F3F5;
+    border: 1px solid #E9EBEE;
+}

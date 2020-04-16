@@ -1,0 +1,30 @@
+/****************************
+ ** LISTING SUBMIT  & EDIT **
+ ****************************/
+
+.listing-edit-sumbit {
+
+}
+
+.listing-edit-sumbit .secondary {
+  transition: visibility 0s, opacity 0.8s linear, padding 0s;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  padding: 0px;
+}
+
+.listing-edit-sumbit.has-category .secondary {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  padding: 30px;
+}
+
+.listing-edit-sumbit h2 {
+  text-align: center;
+}
+
+label.featuresBycat {
+  display: none !important;
+}

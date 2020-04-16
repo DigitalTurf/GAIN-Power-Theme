@@ -1,0 +1,108 @@
+@import 'variables';
+
+/******************
+ *** ALL PAGES ***
+ ******************/
+body {
+  margin-top: 0px !important;
+}
+
+a.lp-add-new-btn {
+  padding: 5px 20px;
+  padding: 0px;
+  margin: 17px auto !important;
+  float: none;
+  display: block;
+  width: 200px;
+  &:hover {
+    background-color: $dark-blue;
+    color: $white !important;
+  }
+}
+
+body.not-home-page {
+  &.search {
+    .header-container2 {
+      position: relative !important;
+      width: 100% !important;
+      z-index: 100 !important;
+      .lp-header {
+        position: fixed;
+        width: 100%;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+      }
+    }
+  }
+  .container {
+    max-width: 856px;
+    margin: 0 auto !important;
+    padding: 0px 30px;
+    width: auto;
+    & > .row {
+      &  > .col-md-8,
+      &  > .col-lg-8 {
+        padding-right: 10px;
+      }
+      & > .col-md-4,
+      & > .col-lg-4 {
+        padding-left: 10px;
+      }
+    }
+  }
+  .content-white-area {
+    .container {
+      padding: 30px;
+    }
+  }
+
+  .lp-top-bar {
+    padding: 0px 16px;
+    .container > .row > div {
+      padding: 0px;
+    }
+  }
+
+  .lp-header-middle {
+    .nav-logo {
+      padding: 0px;
+    }
+    .lp-header-logo {
+      margin-left: 0px;
+    }
+  }
+}
+
+.lp-header-middle > .container-fluid > .row,
+.lp-header-middle > .container {
+  max-width: 1530px !important;
+  margin: 0 auto !important;
+  width: auto !important;
+  padding: 0px !important;
+}
+
+.lp-header-middle > .container {
+  padding: 0px 15px !important;
+}
+
+.lp-top-bar > {
+  .container {
+    padding: 0px 15px !important;
+    max-width: 1500px !important;
+    margin: 0 auto !important;
+    width: auto !important;
+    padding: 0px !important;
+  }
+}
+
+body.not-home-page .lp-top-bar > .container {
+  padding: 0px 15px !important;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7,
+.col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5,
+.col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3,
+.col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  padding: 0px;
+}

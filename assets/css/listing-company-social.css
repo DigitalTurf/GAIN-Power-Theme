@@ -1,0 +1,6 @@
+.widget-box.widget-social svg{
+    margin-top: 8px;
+}
+.widget-box.widget-social .widget-content .list-st-img li.no-border:hover{
+    border: none !important;
+}

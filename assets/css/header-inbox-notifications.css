@@ -1,0 +1,46 @@
+.header-notifications{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.header-notifications a{
+    color: white;
+    position: relative;
+    padding: 2px 5px;
+}
+.header-notifications a:hover {
+    color: #002540;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.header-notifications i{
+    width: auto;
+    text-align: center;
+    color: white;
+}
+.header-notifications a:hover i {
+    color: #002540 !important;
+    cursor: pointer;
+}
+.header-notifications .badge{
+    position: absolute;
+    font-size: 10px;
+    top: -5px;
+    right: -10px;
+    width: auto;
+    min-width: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+    line-height: 16px;
+    height: 16px;
+    border-radius: 13px;
+    background-color: #F44236;
+    text-align: center;
+}

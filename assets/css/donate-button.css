@@ -1,0 +1,40 @@
+.donate-button{
+    display: inline-block;
+    background-color: #A62A59;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+}
+
+.donate-button:hover{
+    background-color: #002440;
+}
+
+/* single-donate class wraps entire button on single listing pages */
+.single-donate{
+    margin-bottom: 30px;
+}
+.single-donate .donate-wrap{
+    text-align: center;
+}
+.single-donate .donate-button{
+    width: 100%;
+    line-height: 28px;
+    font-size: 17px;
+    padding: 11px 28px;
+    border-radius: 4px;
+}
+
+/* loop-donate class wraps entire button on loop listing pages */
+.loop-donate{
+    margin-top: 15px;
+}
+.loop-donate .donate-button{
+    height: 30px;
+    line-height: 30px;
+}

@@ -1,0 +1,35 @@
+.lpQest-img-outer{
+    width: 70px;
+    position: relative;
+    z-index: 10;
+    margin-right: 0px;
+    padding-right: 10px;
+}
+.lpreplyQest-outer .lpQest-img-outer{
+    padding-right: 0px;
+    padding-left: 10px;
+}
+.lpQest-img-outer .lpQest-image{
+    margin: 0 auto;
+}
+.lpQest-img-outer p{
+    line-height: 1.2;
+}
+.lpreplyQest-outer div.lpQest{
+    margin-right: 0px;
+}
+.lpreplyQest-outer .lpQest{
+    float: none;
+}
+.lpQest{
+    float: right;
+}
+.lpQestdate{
+    clear: both;
+}
+.lpQest-img-outer a:hover p{
+    color: #A62A59;
+}
+.lp-sender-info a{
+    font-weight: 500;
+}

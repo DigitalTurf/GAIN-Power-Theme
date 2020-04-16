@@ -1,0 +1,31 @@
+.dz-progress {
+    display: none !important;
+}
+#featured-crop img,
+#business-crop img{
+    max-width: 100%;
+}
+.cropper-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+#featured-crop-button,
+#business-crop-button,
+#featured-remove-image,
+#business-remove-image{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    line-height: 12px;
+    background-color: #A62A59;
+    margin-right: 5px;
+    padding: 8px 10px;
+    float: left;
+}
+#featured-crop-button:hover,
+#business-crop-button:hover,
+#featured-remove-image:hover,
+#business-remove-image:hover{
+    background-color: #BD2961;
+}

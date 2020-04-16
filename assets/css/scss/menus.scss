@@ -1,0 +1,166 @@
+@import 'variables';
+
+/*************
+ *** MENUS ***
+ *************/
+
+body.home-page{
+  &.scrolled {
+    .lp-top-bar {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .lp-header {
+      background-color: $dark-blue;
+      -webkit-box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.6);
+      box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.6);
+    }
+  }
+  .lp-header {
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease, box-shadow  0.3s ease;
+    z-index: 1000;
+  }
+  .page-heading.listing-page {
+    padding-top: 118px;
+  }
+}
+
+body.not-home-page {
+  .lp-top-bar {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .lp-header {
+    background-color: $dark-blue;
+    -webkit-box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.6);
+    box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.6);
+  }
+  .header-container {
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+
+  &.error404 {
+    .page-heading {
+      display: none;
+    }
+  }
+  &.error404 section,
+  section.aliceblue,
+  div.section-contianer,
+  section.section-contianer {
+    padding-top: 84px;
+  }
+  &.has-header-img,
+  &.search {
+    .header-container {
+      position: initial;
+      background-color: $dark-blue;
+      .page-header-overlay {
+        display: none;
+      }
+    }
+    .lp-header {
+      position: fixed;
+      width: 100%;
+    }
+  }
+}
+
+.menu-main-container, #menu-main {
+  li ul.sub-menu {
+    li {
+      a {
+        color: $black;
+        background-color: $white;
+      }
+      &:hover > a {
+        background-color: $dark-blue !important;
+        color: $white;
+        border-left: 0px;
+      }
+    }
+  }
+}
+
+
+
+#wpadminbar {
+  display: none;
+  .administrator & {
+    display: block;
+  }
+}
+
+.lp-header-user-nav-top {
+  &.logged-out {
+    //padding-bottom: 16px !important;
+  }
+
+  #lp-user-name-menu {
+    .menupop {
+      &:hover {
+        background-color: $dark-blue !important;
+      }
+      .ab-sub-wrapper, ul.submenu, ul.sub-menu {
+        background-color: $white;
+        a {
+          color: $black;
+        }
+        li:hover > a {
+          color: $white !important;
+        }
+      }
+    }
+    #menu-item-412 ul.sub-menu {
+      top: -180px !important;
+    }
+    span.count {
+      position: absolute;
+      font-size: 10px;
+      top: 10px;
+      right: 10px;
+      width: auto;
+      min-width: 16px;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 3px;
+      padding-right: 3px;
+      color: $white;
+      line-height: 16px;
+      height: 16px;
+      border-radius: 13px;
+      background-color: $orange;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #user-menu-logout {
+      i {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+  }
+}
+
+#wprmenu_bar {
+  .menu_title {
+    a {
+      top:-2px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.md-modal .bottom-links a.forgetPasswordClick{
+    font-size: 12px;
+}
+.md-modal .modal-trouble{
+    text-align: center;
+    font-size: 12px;
+}
+.md-modal .check-notification{
+    line-height: 1.2;
+    font-size: 15px;
+}
+.md-modal #policy-label{
+    font-size: 11px;
+    line-height: 1.1;
+    padding-bottom: 10px;
+}
+.page-template-login .siginupcontainer .social-login {
+    display: none;
+    visibility: hidden;
+}
+.md-modal .siginupcontainer .social-login{
+    display: none;
+}
+.md-modal .siginupcontainer .social-login.visible{
+    display: block;
+}
+.page-template-login .siginupcontainer .social-login.visible {
+    display: block;
+    visibility: visible;
+}
+.md-modal .siginupcontainer .check-notification{
+    text-align: center;
+}
+.md-modal .siginupcontainer .check-notfication.hide{
+    display: none;
+}
+
+.md-modal ul.social-login {
+  text-align: center;
+}
+
+@media (max-width: 481px){
+    .md-modal .login-form-popup .siginincontainer, .md-modal .login-form-popup .siginupcontainer, .md-modal .login-form-popup .forgetpasswordcontainer{
+        top: 70px;
+    }
+    div.md-modal.md-effect-3.md-show#modal-3{
+        top: 75px;
+    }
+}

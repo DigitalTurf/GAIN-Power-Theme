@@ -1,0 +1,395 @@
+@import 'variables';
+
+/*****************
+ *** DASHBOARD ***
+ *****************/
+ .dashboard-content {
+   #rewies_edit-form
+   .rating-symbol .fa-star {
+     font-size: 20px !important;
+   }
+   #review-section {
+    border: 1px solid #dce0e2;
+    padding: 15px;
+
+    .padding-bottom-15 {
+      padding: 0px;
+    }
+    .margin-bottom-40 {
+      margin-bottom: 10px !important;
+    }
+   }
+   #lp-new-ad-compaignForm {
+     .panel.lp-dashboard-tabs{
+       &.col-md-9 {
+         padding-top: 0px;
+         border: 0px;
+         background: none;
+         box-shadow: none;
+         padding-left: 0px;
+
+         .panel-heading {
+           display: none;
+         }
+         .panel-body {
+           border: 0px solid #ddd;
+           margin-top: 20px;
+         }
+       }
+     }
+
+     .lp-listing-selecter {
+       padding: 10px;
+       border: 1px solid $gray;
+       .col-sm-4 {
+         padding-right: 7px !important;
+         padding-left: 7px !important;
+       }
+
+       .lp-ad-location-image {
+         img {
+           width: 90%;
+         }
+       }
+     }
+     button.lp-add-new-btn.lp-add-new-btn {
+       width: 25%;
+     }
+     .lp-ad-all-attached-packages {
+       li {
+         .fa-check-circle {
+           color: $maroon;
+           display: inline-block;
+           vertical-align: middle;
+         }
+         span {
+           display: inline-block;
+           padding: 0px;
+           vertical-align: middle;
+         }
+       }
+     }
+     .lp-invoice-price.lp-active-plan-btn a {
+       background-color: $dark-blue;
+       padding: 0px 15px;
+       line-height: 22px;
+     }
+     .lp-invoice-number.lp-listing-form input[type="radio"]:checked + label::before {
+       margin-top: -3px;
+       background-color: $maroon !important;
+     }
+
+     .lp-menu-save-btns button {
+       background-color: $maroon !important;
+       color: $white;
+       &:hover {
+         background-color: $dark-blue !important;
+       }
+     }
+   }
+   h5, .lp-inbox-date {
+     font-size: 11px !important;
+     font-weight: normal !important;
+     margin-bottom: 0px !important;
+     line-height: 1em !important;
+     color: $dark-gray !important;
+     letter-spacing: 0.05em !important;
+     float: none;
+     display: block;
+   }
+   ul {
+     list-style: none;
+   }
+   .notices-area {
+     .notice {
+       margin: 0px 0px 10px;
+     }
+   }
+
+   .lp-left-panel-height {
+     padding-top: 0px;
+     border-radius: 5px;
+     width: 73%;
+     margin-right: 2%;
+     .panel-dash-views {
+       padding-top: 0px;
+       h4 {
+         margin-top: 0px;
+         line-height: 1em;
+       }
+     }
+     .section-title {
+       background: $dark-blue;
+     }
+     .lp-activity-image {
+       margin: 0px 10px 0px -5px;
+       .far, .fa {
+         width: 50px;
+         height: 50px;
+         border-radius: 100%;
+         background-color: $light-gray;
+         color: $light-blue;
+         text-align: center;
+         line-height: 50px;
+         font-size: 16px;
+       }
+       .fa-star {
+         color: $light-blue;
+       }
+     }
+     .lp-activity-content {
+       span {
+         margin-top: 5px;
+         max-width: 300px;
+       }
+     }
+   }
+   #lp-announcement-form,
+   .page-template-template-favourites {
+     .lp-left-panel-height {
+       width: 100%;
+     }
+   }
+
+   .col-md-3 {
+     padding-left: 0px !important;
+     padding-right: 0px !important;
+     overflow: hidden;
+     @include border-radius(5px);
+     &.lp-right-panel-height {
+       margin-bottom: 20px;
+     }
+     .lp-general-section-title-outer {
+       .lp-general-section-title {
+         background: $dark-blue;
+         color: $white;
+       }
+     }
+
+     .lp-invoices-all-stats {
+       li {
+         padding-bottom: 5px;
+         border-bottom: 1px solid $light-gray;
+         margin-bottom: 15px;
+         span {
+           float: none;
+           display: block;
+           padding: 5px 0px 0px;
+         }
+         &:first-child, &:last-child {
+           border-bottom: 0px;
+         }
+       }
+     }
+
+     .lp-ad-all-alerts {
+       list-style: none;
+       margin-bottom: 0px;
+       li {
+
+       }
+     }
+     .lp-rating-content {
+     }
+   }
+
+   .lp-dashboard-tabs {
+     padding-bottom: 30px;
+     .nav-tabs {
+       margin-top: 20px;
+       li {
+         margin-right: 20px;
+         a {
+           padding: 5px 10px;
+           margin: 0px;
+           &:hover {
+             border-bottom: 0px;
+           }
+         }
+         &.active a {
+           color: $light-blue;
+           border-bottom: 2px solid $light-blue;
+           &:hover {
+             border-bottom: 2px solid $light-blue;
+           }
+         }
+       }
+     }
+     .lp-review-detail-container {
+       .lp-reviewer-image {
+         width: 50px;
+         height: 50px;
+         overflow: hidden;
+       }
+       .lp-review-details {
+         margin-top: 0px;
+         position: relative;
+         top: -18px;
+         left: 12px;
+         span {
+           font-size: 13px;
+         }
+       }
+     }
+   }
+}
+body.page-template-template-dashboard {
+  #page-content-wrapper {
+    #inbox {
+      pointer-events: initial;
+    }
+  }
+
+  #lp-announcement-form,
+  #lp-listings {
+    .panel-default {
+      .panel-body {
+        border: 1px solid #ddd;
+      }
+    }
+  }
+
+  #reviews {
+    padding-top: 10px;
+  }
+
+  #lp-listings {
+    .panel-default {
+      border: 0px solid #fff;
+    }
+  }
+
+  .lp-add-new-btn.add-new-open-not-first {
+    margin: 0px 0px 10px !important;
+  }
+
+  .dashboard-content {
+    h1 {
+       .blank-left-side & {
+         padding: 0px;
+         margin-top: 0px;
+         margin-bottom: 10px;
+         font-family: 'Montserrat';
+         font-weight: bold;
+         line-height: 40px;
+         text-transform: uppercase;
+         font-size: 26px !important;
+       }
+    }
+    h5 {
+      padding: 0px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-family: 'Montserrat';
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+  .lp-coupons-form-inner {
+    .col-md-4 .form-group {
+      margin-right: 20px;
+    }
+  }
+  .lp-left-panel-height {
+    padding-top: 0px !important;
+  }
+  .lp-left-content-container {
+    a {
+      line-height: 16px;
+      &.lp-cat-name-first {
+        font-weight: 600 !important;
+      }
+    }
+  }
+  .nav.nav-tabs {
+    margin: 0px;
+    li {
+      a {
+        border: 0px solid #ddd !important;
+        &:hover {
+          border: 0px solid #ddd !important;
+          color: $dark-blue;
+        }
+      }
+      &.active a {
+        border: 0px solid #ddd !important;
+        border-bottom: 2px solid $maroon !important;
+      }
+    }
+  }
+  ul#dash-listing-menu {
+    li a {
+      display: none;
+    }
+    ul.sub-menu {
+      display: flex !important;
+      opacity: 1;
+      height: auto;
+      max-height: none;
+      position: initial;
+      transform: none;
+      width: 100%;
+      margin: 10px auto 20px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          padding: 0px 5px;
+          border: 0px !important;
+          &:hover {
+            border: 0px !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    li.current-menu-item a {
+    background-color: #a52a59 !important;
+    color: #fff !important;
+    padding: 0px 10px !important;
+    border-radius: 8px;
+    }
+  }
+}
+
+ul#dash-listing-menu {
+  list-style: none;
+  li a {
+    display: none;
+  }
+  ul.sub-menu {
+    display: flex !important;
+    opacity: 1;
+    height: auto;
+    max-height: none;
+    position: initial;
+    transform: none;
+    width: 100%;
+    margin: 10px auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        padding: 0px 5px;
+        border: 0px !important;
+        &:hover {
+          border: 0px !important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  li.current-menu-item a {
+  background-color: #a52a59 !important;
+  color: #fff !important;
+  padding: 0px 10px !important;
+  border-radius: 8px;
+  }
+}
