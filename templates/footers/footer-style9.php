@@ -55,7 +55,9 @@ global $listingpro_options;
                             <?php echo listingpro_footer_menu(); ?>
 
                         <?php endif; ?>
-												<div class="copyright-text"><?php echo $copy_right; ?></div>
+												<div class="copyright-text"><?php echo $copy_right; ?><br>
+												<div class="copyright-text">Powered by <a href="https://digitalturf.net/" target="_blank">Digital Turf</a></div>
+												</div>
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <?php if(!empty($tw) || !empty($gog) || !empty($fb) || !empty($insta) || !empty($tumb) || !empty($fpintereset) || !empty($flinked) || !empty($fyout) || !empty($fvk)){ ?>
