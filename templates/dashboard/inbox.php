@@ -12,8 +12,8 @@ if(empty($lpAllMessges)){
 	 ?>
 		<div class="lp-blank-section">
 			<div class="col-md-12 blank-left-side">
-			   <h1><?php echo esc_html__('You don\'t have any messages, yet!', 'listingpro'); ?></h1>
-				<p class="margin-bottom-20"><?php echo esc_html__('You must be here for the first time. You will see messages here when user will contact you through lead form.', 'listingpro'); ?></p>
+			   <h1><?php echo esc_html__('You don\'t have any messages about your listings yet!', 'listingpro'); ?></h1>
+				<p class="margin-bottom-20"><?php echo esc_html__('Come back soon when you get an alert for a message.', 'listingpro'); ?></p>
 			</div>
 
 		</div>
