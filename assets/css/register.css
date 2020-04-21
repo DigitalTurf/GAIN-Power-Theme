@@ -1,0 +1,7 @@
+.buddypress-wrap .standard-form .bp-radio-wrap{
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.buddypress-wrap .standard-form .bp-radio-wrap label{
+    display: inline;
+}
