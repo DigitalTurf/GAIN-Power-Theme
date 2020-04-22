@@ -47,7 +47,7 @@ if ( have_posts() ) {
 
         $claim = '';
         if($claimed_section == 'claimed') {
-            $claim = '<span class="claimed"><i class="fas fa-check"></i> '. esc_html__('Claimed', 'listingpro').'</span>';
+            $claim = '<span style="white-space:nowrap" class="claimed"><i class="fas fa-check"></i> '. esc_html__('Claimed', 'listingpro').'</span>';
 
         }elseif($claimed_section == 'not_claimed') {
             $claim = '';
