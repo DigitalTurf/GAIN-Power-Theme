@@ -8568,6 +8568,7 @@ ul.list-style-none.list-st-img li:last-child a span:last-child {
 .listing-second-view .post-meta-left-box h1 span.claimed {
     color: #7f7f7f;
     font-weight: 400;
+    white-space: nowrap;
     vertical-align: middle
 }
 
