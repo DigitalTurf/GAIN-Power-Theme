@@ -892,14 +892,14 @@ if(!function_exists('listingpro_shortcode_edit_custom')){
 									</div>';
 			}
 
-			if(!empty($formFields)){
+			/*if(!empty($formFields)){
 				$output .='
 									<div class="featuresDataContainer row clearfix lp-nested" id="features-by-cat">';
 				$output .= '<label for="inputTags" class="featuresBycat">'.esc_html__('Additional Business Info', 'listingpro-plugin').'</label>';
 				$output .= $formFields;
 				$output	.='
 									</div>';
-			}
+			}*/
 			$output .=  '   </div>';
 			$output .=  '</div>';
 			if( $price_show == "true" && ($currencySwitch == 1 || $digitPriceSwitch == 1 || $priceSwitch == 1))
@@ -1904,14 +1904,14 @@ if(!function_exists('listingpro_shortcode_edit_custom')){
 									</div>';
 			}
 
-			if(!empty($formFields)){
+			/*if(!empty($formFields)){
 				$output .='
 									<div class="featuresDataContainer row clearfix lp-nested" id="features-by-cat">';
 				$output .= '<label for="inputTags" class="featuresBycat">'.esc_html__('Additional Business Info', 'listingpro-plugin').'</label>';
 				$output .= $formFields;
 				$output	.='
 									</div>';
-			}
+			}*/
 			/* $output .='
 								</div>'; */
 			if ($price_show == "true" && ($currencySwitch == 1 || $digitPriceSwitch == 1 || $priceSwitch == 1))

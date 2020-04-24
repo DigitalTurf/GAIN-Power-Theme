@@ -327,8 +327,11 @@
 							if(isset($_POST['lp_form_fields_inn'])){
 								$metaFields = 'lp_'.strtolower(THEMENAME).'_options_fields';
 								$fields = $_POST['lp_form_fields_inn'];
+								foreach($fields as $key => $arr){
+									$arr = array_unique($arr);
+									$fields[$key] = $arr;
+								}
 								update_post_meta($postID, $metaFields, $fields);
-
 							}
 
 							$priceStatus = sanitize_text_field($_POST['price_status']);
@@ -781,8 +784,12 @@
                                     }
                                     if(isset($_POST['lp_form_fields_inn'])){
                                         $metaFields = 'lp_'.strtolower(THEMENAME).'_options_fields';
-                                        $fields = $_POST['lp_form_fields_inn'];
-                                        update_post_meta($postID, $metaFields, $fields);
+										$fields = $_POST['lp_form_fields_inn'];
+										foreach($fields as $key => $arr){
+											$arr = array_unique($arr);
+											$fields[$key] = $arr;
+										}
+										update_post_meta($postID, $metaFields, $fields);
 
                                     }
 
@@ -1105,8 +1112,12 @@
                                         }
                                         if(isset($_POST['lp_form_fields_inn'])){
                                             $metaFields = 'lp_'.strtolower(THEMENAME).'_options_fields';
-                                            $fields = $_POST['lp_form_fields_inn'];
-                                            update_post_meta($postID, $metaFields, $fields);
+											$fields = $_POST['lp_form_fields_inn'];
+											foreach($fields as $key => $arr){
+												$arr = array_unique($arr);
+												$fields[$key] = $arr;
+											}
+											update_post_meta($postID, $metaFields, $fields);
 
                                         }
 
@@ -1628,8 +1639,13 @@
 						if(isset($_POST['lp_form_fields_inn'])){
 							$metaFields = 'lp_'.strtolower(THEMENAME).'_options_fields';
 							$fields = $_POST['lp_form_fields_inn'];
+							foreach($fields as $key => $arr){
+								if(is_array($arr)){
+									$arr = array_unique($arr);
+									$fields[$key] = $arr;
+								}
+							}
 							update_post_meta($postID, $metaFields, $fields);
-
 						}
 
 						$priceStatus = sanitize_text_field($_POST['price_status']);
