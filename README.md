@@ -14,17 +14,18 @@ In the event that you need to reset the development instance to be an exact clon
 
 1. **SSH Connection:** Establish an SSH connection with the hosting server. Check the [DevOPs documentation](https://docs.google.com/document/d/1KFToLYK7Ii_Wdjo7dVBNsxy1kn69Avqb7H8ACqQPvC4) for the SSH info.
 
-1. **Run Reset Script:** On the host server, run the following script to backup the existing development environment and load an exact clone of the production server:
+1. **Run Reset Script:** On the host server, run the following script to backup the existing development environment and load an exact clone of the production server in you instance:
 ```bash
-$ sh ~/scripts/reset-dev.sh
+$ sh ~/scripts/reset-user-dev.sh
 ```
 Please be patient. This script can take a few minutes to complete.
 
+
 #### Contributing to the GAIN Power theme
 
-All the changes to the site should be done in the development instance. All edits will be pushed to this repo. Internal and client reviews will happen on the dev site and once approved, they will be deployed to production.
+All the changes to the site should be done in your development instance. All edits will be pushed to your branch in this repo. Internal and client reviews will happen on the dev site and once approved, they will be deployed to production.
 
-1. **Open theme directory in FTP:** Check the [DevOPs documentation](https://docs.google.com/document/d/1KFToLYK7Ii_Wdjo7dVBNsxy1kn69Avqb7H8ACqQPvC4) for the FTP info. Once a connection has been established, browse to the `~/dev/wp-content/themes/listingpro-child` directory.
+1. **Open theme directory in FTP:** Check the [DevOPs documentation](https://docs.google.com/document/d/1KFToLYK7Ii_Wdjo7dVBNsxy1kn69Avqb7H8ACqQPvC4) for the FTP info. Once a connection has been established, browse to the `~/userdev/YOURNAME/wp-content/themes/listingpro-child` directory.
 
 1. **Edit files:** Make any edits to the theme files as needed. If you need to make changes to the SCSS files, you'll need to start the SASS program to compile the general.css file. To start the SASS compiler, run the following script on the SSH connection:
 ```bash
@@ -32,21 +33,15 @@ All the changes to the site should be done in the development instance. All edit
 $ sh ~/scripts/sass-dev.sh
 ```
 
-1. **Commit Changes:** Once all your changes have been made, commit them by running the commit script and supplying the following parameters:
-
-**NAME** - Your name in all lowercase (e.g. phillip, austin, tristan).
-**MSG** - Your commit message. Don't use any special characters.
+1. **Commit Changes:** Once all your changes have been made, commit them by running the commit script and providing info when prompted:
 
 ```bash
-## Replace NAME and MSG with your values. Keep your text wrapped in the single quotes.
-$ sh ~/scripts/commit-dev.sh 'NAME' 'MSG'
-
-## Example
-$ sh ~/scripts/commit-dev.sh 'phillip' 'Fixed menu styling'
+## Select your instance and enter your commit message when prompted.
+$ sh ~/scripts/commit-dev.sh
 ```
 
-#### Deploying Dev to production
-Once your changes have approved, deploy them to the production instance with the following script:
+#### Deploying User Dev to production
+Once your changes have approved, Phillip will deploy them to the development instance for client review and eventually deploying to production instance with the following script:
 
 ```bash
 ## Deploy theme to production.
