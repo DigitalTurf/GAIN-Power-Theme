@@ -38,7 +38,7 @@
                 vertical-align: middle;
                 min-height: 100%;
                 width: 100%;
-                background-image: url("../wp-content/themes/listingpro-child/assets/images/GP-Flag-Header.jpg");
+                background-image: url("../wp-content/themes/listingpro-child/assets/images/login-bg.png");
                 background-size: cover;
 				overflow: auto;
             }
