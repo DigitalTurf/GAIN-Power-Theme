@@ -33,28 +33,10 @@ function listingpro_shortcode_blog_grids_custom($atts, $content = null) {
             }else{
                 $thumbnail = 'https://via.placeholder.com/372x240';
             }
-            $categories = get_the_category(get_the_ID());
             $display_category = 'Advice';
-            if ( ! empty( $categories ) ) {
-                foreach($categories as $category){
-                    if($category->name === 'Political Founders'){
-                        $display_category = 'Political Founders';
-                        break;
-                    }else if($category->name === 'Electeds'){
-                        $display_category = 'Electeds';
-                        break;
-                    }else if($category->name === 'Event'){
-                        $display_category = 'Event';
-                        break;
-                    }
-                }
-            }
-            $separator = ' ';
-            $catoutput = '';
-            if ( ! empty( $categories ) ) {
-                foreach( $categories as $category ) {
-                    $catoutput .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" >' . esc_html( $category->name ) . '</a>' . $separator;
-                }
+            $category_meta = listing_get_metabox('lp_post_label');
+            if(!empty($category_meta)){
+                $display_category = $category_meta;
             }
 
             $author_avatar_url = get_user_meta(get_the_author_meta( 'ID' ), "listingpro_author_img_url", true);
