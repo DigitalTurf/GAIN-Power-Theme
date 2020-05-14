@@ -71,7 +71,12 @@ $post_options = Array(
         'name' => esc_html__('Add Banner', 'listingpro-plugin'),
         'id' => 'lp_post_banner',
         'type' => 'file',
-        'desc' => 'Upload banner for this page'),
+		'desc' => 'Upload banner for this page'),
+	Array(
+		'name' => esc_html__('Add Label', 'listingpro-plugin'),
+		'id' => 'lp_post_label',
+		'type' => 'text',
+		'desc' => 'Label to be displayed on post previews'),
 );
 	
 $page_options = Array(
