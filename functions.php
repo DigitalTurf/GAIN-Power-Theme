@@ -969,3 +969,25 @@ function listing_all_extra_fields($postid){
 		return $output;
 	}
 }
+
+/**
+ * Override parent theme's single-ajax.js
+ */
+function Listingpro_single_ajax_init(){
+			
+			
+	wp_register_script('ajax-single-ajax', get_stylesheet_directory_uri() . '/assets/js/single-ajax.js', array('jquery') ); 
+	 
+	wp_enqueue_script('ajax-single-ajax');
+	
+
+	wp_localize_script( 'ajax-single-ajax', 'single_ajax_object', array( 
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+	));
+	
+}
+if(!is_admin()){
+	if(!is_singular('listing')){
+		add_action('init', 'Listingpro_single_ajax_init');
+	}
+}
