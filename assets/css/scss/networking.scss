@@ -1147,7 +1147,7 @@ form {
   }
 }
 
-.messages-wrapper {
+.messages-wrapper, #group-messages-container {
   margin-top: 30px;
   border: 1px solid $light-gray;
   @include border-radius(5px);
@@ -1173,6 +1173,44 @@ form {
     padding: 0px !important;
     #send_message_form, .message-box {
       padding: 0px 20px 20px;
+    }
+  }
+}
+
+#group-messages-container {
+  h2.bb-title {
+    margin: 5px 0px 9px;
+    font-size: 19px;
+  }
+  .bp-group-message-label:before {
+    display: none;
+  }
+  .bp-select-members-wrap {
+    ul.select2-selection__rendered {
+      padding-top: 25px !important;
+      padding-left: 5px !important;
+    }
+    span.select2-selection.select2-selection--single {
+      display: none;
+    }
+    input.select2-search__field, span.select2.select2-container.select2-container--default:last-child {
+      display: none;
+    }
+  }
+
+  .group-messages-search {
+    padding: 0px !important;
+    form#group_messages_search_form {
+      width: 100%;
+      border-top: 0px;
+      input#group_messages_search {
+        padding: 10px;
+      }
+      button#group_messages_search_submit {
+        position: relative;
+        top: 4px;
+        left: 10px;
+      }
     }
   }
 }

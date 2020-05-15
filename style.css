@@ -963,11 +963,30 @@ h1.page-title {
 blockquote {
   padding: 0px;
   margin: 0px;
-  border-left: 0px solid #eee;
+  border-left: 2px solid #002540;
   text-align: left !important;
 }
 
 blockquote p {
+    background-color: transparent;
+    color: #002540;
+    font-weight: normal;
+    text-align: left !important;
+    font-style: normal;
+    padding: 5px 0px 5px 15px;
+    display: block;
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+}
+
+body.single-post blockquote {
+  padding: 0px;
+  margin: 0px;
+  border-left: 0px solid #eee;
+  text-align: left !important;
+}
+
+body.single-post blockquote p {
   background-color: #000;
   color: #fff;
   font-weight: 900;
@@ -976,6 +995,8 @@ blockquote p {
   display: initial;
   box-decoration-break: clone;
   padding: 0px 5px;
+  font-size: 14px !important;
+  margin-bottom: 5px !important;
 }
 
 blockquote::after,

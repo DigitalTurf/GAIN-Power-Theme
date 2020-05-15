@@ -461,6 +461,7 @@ body.not-home-page.listing-template-default {
       a.phone-number {
         vertical-align: inherit;
         color: $maroon;
+        margin-left: 17px;
         &:hover {
           color: $maroon-highlight;
         }
@@ -473,6 +474,8 @@ body.not-home-page.listing-template-default {
         }
         & > img.icon  {
           vertical-align: middle;
+          position: relative;
+          top: 2px;
         }
       }
     }
