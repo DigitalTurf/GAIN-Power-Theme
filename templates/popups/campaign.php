@@ -3,6 +3,7 @@ $adTitle = lp_theme_option('lp_pro_title_new');
 $lp_pro_text_list1 = lp_theme_option('lp_pro_text_list1');
 $lp_pro_text_list2 = lp_theme_option('lp_pro_text_list2');
 $lp_pro_text_list3 = lp_theme_option('lp_pro_text_list3');
+$lp_pro_text_list4 = lp_theme_option('lp_pro_text_list4');
 $adImage = lp_theme_option_url('lp_pro_img_new');
 ?>
 <!-- create campagin popup-->
@@ -52,6 +53,13 @@ $adImage = lp_theme_option_url('lp_pro_img_new');
 										<?php
 									}
 									?>
+									<br>
+									<li class="clearfix">
+										<div class="lp-step-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+										<div class="lp-icon-content-outer">
+												<h5>Pay</h5>
+										</div>
+									</li>
                             </ul>
                             
                         </div>

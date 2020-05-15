@@ -3901,6 +3901,9 @@ body.page-template-template-dashboard ul#dash-listing-menu li.current-menu-item 
   padding: 0px 10px !important;
   border-radius: 8px;
 }
+body.page-template-template-dashboard .lp-ad-image-section-content h5 {
+  padding: 6px 0px;
+}
 
 ul#dash-listing-menu {
   list-style: none;
