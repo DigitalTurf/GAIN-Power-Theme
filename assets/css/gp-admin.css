@@ -71,3 +71,8 @@ body.post-type-banner_images .misc-pub-curtime,
 body.post-type-banner_images #delete-action{
   display: none;
 }
+
+/* Comment this out to hide the pricing plan field */
+tr#Plan_id {
+  display:table-row !important
+}
