@@ -29,7 +29,6 @@
 						<?php for ($i = 1; $i <= (count($faq)); $i++) { ?>
 							<?php if( !empty($faq[$i])) { ?>
 								<h5>
-								  <span class="question-icon"><?php echo esc_html__('Q', 'listingpro'); ?></span>
 								  <span class="accordion-title"><?php echo esc_html($faq[$i]); ?></span>
 								</h5>
 								<div>
