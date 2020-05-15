@@ -3,7 +3,6 @@ $adTitle = lp_theme_option('lp_pro_title_new');
 $lp_pro_text_list1 = lp_theme_option('lp_pro_text_list1');
 $lp_pro_text_list2 = lp_theme_option('lp_pro_text_list2');
 $lp_pro_text_list3 = lp_theme_option('lp_pro_text_list3');
-$lp_pro_text_list4 = lp_theme_option('lp_pro_text_list4');
 $adImage = lp_theme_option_url('lp_pro_img_new');
 ?>
 <!-- create campagin popup-->
