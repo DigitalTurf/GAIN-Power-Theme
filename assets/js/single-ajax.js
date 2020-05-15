@@ -495,7 +495,15 @@ jQuery(document).on('click', 'button.coupon-apply-bt', function(){
                      lp_add_checkout_data_fields_in_form($listingID, $post_title, $planID, $newprice, $tax, $taxRate);
 					  if(jQuery('li').hasClass('checkout_discount_val')){}else{
 					 jQuery('span.lp-subtotal-p-price').parent().after('<li class="checkout_discount_val"><span class="item-price-total-left lp-subtotal-plan">Discounted</span><span class="item-price-total-right lp-subtotal-p-prasaice">'+$discount+'%</span></li>');
-					  }
+                      }
+                      jQuery('.coupon-error').remove();
+                 }else{
+                    var error = '<div class="row coupon-error">';
+                    error += '<div class="col-sm-12">';
+                 	error += '<div style="border: 1px solid #ebccd1; border-radius: 4px; background-color: #F2DEDE; padding: 9px 10px; color: #c42020; margin-bottom: 20px;">Invalid Coupon Code</div>';
+                 	error += '</div></div>';
+                 	jQuery('.coupon-error').remove();
+                    jQuery('.checkout-padding-top-bottom').prepend(error);
                  }
 
              },
@@ -510,6 +518,7 @@ jQuery(document).on('click', 'button.coupon-apply-bt', function(){
  
  /* reset tax in database while switching offto discound */
 jQuery(document).on('click', 'input[name="lp_checkbox_coupon"]', function(){
+    jQuery('.coupon-error').remove();
 	if(jQuery(this).hasClass('active')){}else{
 		
 		 var couponcode = '';
