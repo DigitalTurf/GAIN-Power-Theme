@@ -975,7 +975,7 @@ if(!function_exists('listingpro_shortcode_submit_custom')){
 											<p>' . esc_html__('Put your listing title here and tell the name of your business to the world.', 'listingpro-plugin') . '</p>
 										</div>
 									</div>
-											<input data-quick-tip="<p>'. esc_html__( 'this is test data for quick tip for title field', 'listingpro-plugin' ) .'</p>' . $quicktip_image . '" type="text" name="postTitle" class="form-control margin-bottom-10" id="lptitle" placeholder="' . esc_html__('Progressive Power Inc.', 'listingpro-plugin') . '">';
+											<input data-quick-tip="<p>'. esc_html__( 'this is test data for quick tip for title field', 'listingpro-plugin' ) .'</p>' . $quicktip_image . '" type="text" name="postTitle" class="form-control margin-bottom-10" id="lptitle" placeholder="' . esc_html__('Progressive Power Inc.', 'listingpro-plugin') . '"><div class="small-description">Titles longer than 60 characters might not display fully in all areas of GAIN Power.</div>';
 											if($enableGoogle=="yes"){
 
 												$output .='<input data-quick-tip="<p>'. esc_html__( 'this is test data for quick tip for title field', 'listingpro-plugin' ) .'</p>' . $quicktip_image . '" type="hidden" id="lptitleGoogle" name="" class="form-control margin-bottom-10 lptitle"  placeholder="' . esc_html__('Progressive Power Inc.', 'listingpro-plugin') . '">

@@ -1373,7 +1373,7 @@ if(!function_exists('listingpro_shortcode_edit_custom')){
 											</div>
 										</div>
 										<input data-quick-tip="<p>'.esc_html__('Put your listing title here and tell the name of your business to the world. ', 'listingpro-plugin').'</p>'.$quicktip_image.'" type="text" value="'.get_the_title($lp_post).'" name="postTitle" class="form-control" id="lptitle">
-									</div>';
+									</div><div class="small-description">Titles longer than 60 characters might not display fully in all areas of GAIN Power.</div>';
 			if($tagline_show == "true"){
 				$output .='
 										<div class="form-group">
