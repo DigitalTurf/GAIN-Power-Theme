@@ -991,3 +991,11 @@ if(!is_admin()){
 		add_action('init', 'Listingpro_single_ajax_init');
 	}
 }
+
+/**
+ * Include custom WP Bakery element for listing categories
+ */
+add_action('init', 'gp_vc_elements');
+function gp_vc_elements(){
+	include_once(dirname(__FILE__) . "/include/vc-elements.php");
+}

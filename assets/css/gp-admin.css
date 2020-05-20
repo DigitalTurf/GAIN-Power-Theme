@@ -76,3 +76,12 @@ body.post-type-banner_images #delete-action{
 tr#Plan_id {
   display:table-row !important
 }
+
+/* Layout for checkboxes in custom WP Bakery Masonry element */
+div.vc_ui-panel-window[data-vc-shortcode="gp_categories"] label.vc_checkbox-label{
+  display: block;
+  float: left;
+  overflow: hidden;
+  width: 33.333333%;
+  margin-bottom: 15px;
+}
