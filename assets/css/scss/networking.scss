@@ -387,6 +387,10 @@ body.search-results {
     border: 2px solid $light-gray;
     border-width: 2px 2px 0px 2px !important;
     border-radius: 4px 4px 0px 0px !important;
+    #header-cover-image {
+    height: 0px !important;
+    padding-bottom: 28.5%;
+    }
     .desc-wrap {
       border: 0px solid #ccc !important;
       padding: 0px;

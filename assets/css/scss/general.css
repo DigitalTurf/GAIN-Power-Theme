@@ -445,6 +445,11 @@ body.search-results .breadcrumbs {
   border-width: 2px 2px 0px 2px !important;
   border-radius: 4px 4px 0px 0px !important;
 }
+.buddypress .users-header #header-cover-image,
+.buddypress .groups-header #header-cover-image {
+  height: 0px !important;
+  padding-bottom: 28.5%;
+}
 .buddypress .users-header .desc-wrap,
 .buddypress .groups-header .desc-wrap {
   border: 0px solid #ccc !important;
