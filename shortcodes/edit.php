@@ -64,6 +64,9 @@ if(!function_exists('listingpro_shortcode_edit_custom')){
 		$gSiteKey = '';
 		$gSiteKey = $listingpro_options['lp_recaptcha_site_key'];
 
+		$title = str_replace('Listing', ucfirst( lp_theme_option( 'listing_public_name' ) ), $title );
+		$subtitle = str_replace('listing', lcfirst( lp_theme_option( 'listing_public_name' ) ), $subtitle );
+
 		$singleLocMode = true;
 		if( isset($listingpro_options['lp_listing_location_mode']) ){
 			if($listingpro_options['lp_listing_location_mode']=="multi"){
@@ -333,7 +336,7 @@ if(!function_exists('listingpro_shortcode_edit_custom')){
 		$listing_cat_text = $listingpro_options['listing_cat_text'];
 
 		// Override listing cat text to plural
-		$listing_cat_text = 'Choose Your Listing Categories';
+		$listing_cat_text = 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories';
 
 		$listing_features_text = $listingpro_options['listing_features_text'];
 		$currencySwitch = $listingpro_options['currency_switch'];
@@ -1709,11 +1712,11 @@ if(!function_exists('listingpro_shortcode_edit_custom')){
 			if($singleCatMode==true){
 
 				$output .='
-											<select autocomplete="off" data-placeholder="'.esc_html__('Choose Your Listing Categories', 'listingpro-plugin').'" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5">';
+											<select autocomplete="off" data-placeholder="'. 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories' .'" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5">';
 
 			}else{
 				$output .='
-											<select autocomplete="off" data-placeholder="'.esc_html__('Choose Your Listing Categories', 'listingpro-plugin').'" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5" multiple="multiple">';
+											<select autocomplete="off" data-placeholder="'. 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories' .'" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5" multiple="multiple">';
 			}
 
 			if(!empty($preselctedCat)){

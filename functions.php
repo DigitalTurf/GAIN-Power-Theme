@@ -584,6 +584,33 @@ function add_another_field_value_sk($field){
 }
 
 /**
+ * Add option to set public-facing term to replace "listing"
+ */
+function add_listing_name_redux($section) {
+	array_unshift( $section['fields'], array(
+		'id'       => 'listing_public_name',
+		'type'     => 'text',
+		'title'    => __( 'Change name for listings', 'listingpro' ),
+		'subtitle' => __( 'Use singular. Example: page', 'listingpro' ),
+		'default'  => 'listing'
+	) );
+
+	return $section;
+}
+add_filter('redux/options/listingpro_options/section/listing_setting_general', 'add_listing_name_redux');
+
+/**
+ * Override BuddyBoss "listing" term to use the public-facing term we set manually
+ */
+function gp_bb_listing_name($label) {
+	if ( $label === 'cpt-listing' ){
+		$label = lp_theme_option( 'listing_public_name' ) . 's';
+	}
+	return $label;
+}
+add_filter('bp_search_label_search_type', 'gp_bb_listing_name');
+
+/**
  * Override listing notifications
  */
 if(!function_exists('lp_notification_div')){

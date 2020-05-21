@@ -124,12 +124,12 @@
 							<div class="lp-title col-md-10 col-sm-10">
 								<?php $cat_description = tag_description(); ?>
 								<?php if(is_search()){ ?>
-								<h3><?php echo $termName; ?> <span class="dename"><?php echo $emptySearchTitle; ?></span><span class="font-bold"><?php echo esc_html__( ' Listings', 'listingpro' );?></span> <?php echo $locName; ?></h3>
+								<h3><?php echo $termName; ?> <span class="dename"><?php echo $emptySearchTitle; ?></span><span class="font-bold"><?php echo esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) . 's' ) ); ?></span> <?php echo $locName; ?></h3>
 								<?php if($cat_description != '' && $cat_description != null){ ?>
 								<h4 class="category-description"><?php echo tag_description(); ?></h4>
 								<?php } ?>
 								<?php }else{ ?>
-								<h3><?php echo esc_html__( 'Results For ', 'listingpro' );?> <span class="font-bold term-name"><?php echo $termName; ?></span><span class="font-bold"><?php echo esc_html__( ' Listings', 'listingpro' );?></span> </h3>
+								<h3><?php echo esc_html__( 'Results For ', 'listingpro' );?> <span class="font-bold term-name"><?php echo $termName; ?></span><span class="font-bold"><?php echo esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) . 's' ) ); ?></span> </h3>
 								<?php } ?>
 								<?php if($cat_description != '' && $cat_description != null){ ?>
 								<h4 class="category-description"><?php echo tag_description(); ?></h4>

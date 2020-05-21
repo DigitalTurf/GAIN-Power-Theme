@@ -90,6 +90,9 @@ if(!function_exists('listingpro_shortcode_submit_custom')){
 		$listingptext ='';
 		$video ='';
 
+		$title = str_replace('Listing', ucfirst( lp_theme_option( 'listing_public_name' ) ), $title );
+		$subtitle = str_replace('listing', lcfirst( lp_theme_option( 'listing_public_name' ) ), $subtitle );
+
 		/* MODE CHECK */
 		if( $lp_paid_mode == "yes" ){
 
@@ -287,7 +290,7 @@ if(!function_exists('listingpro_shortcode_submit_custom')){
 		$listing_cat_text = $listingpro_options['listing_cat_text'];
 
 		// Override listing cat text to plural
-		$listing_cat_text = 'Choose Your Listing Categories';
+		$listing_cat_text = 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories';
 
 		$listing_features_text = $listingpro_options['listing_features_text'];
 		$currencySwitch = $listingpro_options['currency_switch'];
@@ -1217,7 +1220,7 @@ if(!function_exists('listingpro_shortcode_submit_custom')){
 			if(!empty($cat_plan_id)){
 				$output .='<input type="hidden" name="lppre_plan_cats" value="true" />';
 				$output .= '
-						<select data-placeholder="' . esc_html__('Choose Your Listing Categories', 'listingpro-plugin') . '" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5">';
+						<select data-placeholder="' . 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories' . '" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5">';
 						$selectedCatObj = get_term_by('id', $cat_plan_id, 'listing-category');
 						$selectedCatName = $selectedCatObj->name;
 						$output .= '<option value="'.$cat_plan_id.'">' . $selectedCatName . '</option>';
@@ -1227,10 +1230,10 @@ if(!function_exists('listingpro_shortcode_submit_custom')){
 
 				if ($singleCatMode == true) {
 					$output .= '
-												<select data-placeholder="' . esc_html__('Choose Your Listing Categories', 'listingpro-plugin') . '" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5">';
+												<select data-placeholder="' . 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories' . '" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5">';
 				} else {
 					$output .= '
-												<select data-placeholder="' . esc_html__('Choose Your Listing Categories', 'listingpro-plugin') . '" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5" multiple="multiple">';
+												<select data-placeholder="' . 'Choose Your ' . esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ) . ' Categories' . '" id="inputCategory" name="category[]" class="select2 postsubmitSelect" tabindex="5" multiple="multiple">';
 				}
 				$output .= '<option value="">' . esc_html__('Select Category', 'listingpro-plugin') . '</option>';
 				$args = array(

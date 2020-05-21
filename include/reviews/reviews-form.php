@@ -114,7 +114,7 @@ if(!function_exists('listingpro_get_reviews_form')){
 							?>
 							<div class = "col-md-6 padding-left-0">
 								<div class="form-group rating-containter">
-									<label class="rating-label"><?php esc_html_e('Your Rating for this listing','listingpro'); ?></label>
+									<label class="rating-label"><?php echo 'Your rating for this ' . esc_html( lcfirst( lp_theme_option( 'listing_public_name' ) ) ); ?></label>
 									<div class="sfdfdf list-style-none form-review-stars">
 										<input type="hidden" id="review-rating" name="rating" class="rating-tooltip" data-filled="far fa-star fa-2x" data-empty="far fa-star fa-2x" />
 										<div class="review-emoticons">
@@ -249,7 +249,7 @@ if(!function_exists('listingpro_get_reviews_form')){
 							?>
 						    <div class="col-md-6 padding-left-0">
                                 <div class="form-group rating-containter">
-                                    <label class="rating-label"><?php esc_html_e('Your Rating for this listing','listingpro'); ?></label>
+                                    <label class="rating-label"><?php echo 'Your rating for this ' . esc_html( lcfirst( lp_theme_option( 'listing_public_name' ) ) ); ?></label>
                                     <input type="hidden" id="review-rating" name="rating" class="rating-tooltip" data-filled="far fa-star fa-2x" data-empty="far fa-star fa-2x" />
                                     <div class="review-emoticons">
                                         <div class="review angry"><?php echo listingpro_icons('angry'); ?></div>
