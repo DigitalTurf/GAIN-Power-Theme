@@ -73,3 +73,23 @@
      }
    }
  }
+
+ /* Custom classes added to the members-loop.php */
+ul#members-list{
+	.bp-current-occupation,
+	.bp-current-employer{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 0px 8px;
+		margin-bottom: 0px;
+		font-size: 13px;
+		color: #002440;
+	}
+	.bp-current-occupation{
+		margin-bottom: 0px;
+	}
+	.bp-current-employer{
+		margin-bottom: 5px;
+	}
+}

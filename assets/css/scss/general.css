@@ -3524,6 +3524,24 @@ body.forum-template-default .bbp-topic-form #bbp_topic_submit:hover {
   color: #A62A59;
 }
 
+/* Custom classes added to the members-loop.php */
+ul#members-list .bp-current-occupation,
+ul#members-list .bp-current-employer {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 8px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: #002440;
+}
+ul#members-list .bp-current-occupation {
+  margin-bottom: 0px;
+}
+ul#members-list .bp-current-employer {
+  margin-bottom: 5px;
+}
+
 /*$pale-blue: #E6F4FF;*/
 /*$light-blue: #429BFF;*/
 /*********************

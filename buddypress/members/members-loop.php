@@ -40,11 +40,27 @@ bp_nouveau_before_loop(); ?>
 							<a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
 						</h2>
 						<?php
-							$current_occupation = xprofile_get_field_data( 'Current Occupation', bp_get_member_user_id() );
-							$current_employer   = xprofile_get_field_data( 'Current Employer', bp_get_member_user_id() );
+						$current_occupation = xprofile_get_field_data( 'Current Occupation', bp_get_member_user_id() );
+						$current_employer   = xprofile_get_field_data( 'Current Employer', bp_get_member_user_id() );
+
+						// Adds the ... in PHP if the string is over 36 characters and adds it to the end of the last word. There is a CSS text-ellipses fallback in case the string has large characters (community.scss).
+						if ( strlen( $current_occupation ) > 36 ) {
+							$current_occupation = explode( "\n", wordwrap( $current_occupation, 36 ) );
+							$current_occupation = $current_occupation[0] . '...';
+						}
+						if ( strlen( $current_employer ) > 36 ) {
+							$current_employer = explode( "\n", wordwrap( $current_employer, 36 ) );
+							$current_employer = $current_employer[0] . '...';
+						}
+						if ( strlen( $current_occupation ) === 0 ) {
+							$current_occupation = '&nbsp;';
+						}
+						if ( strlen( $current_employer ) === 0 ) {
+							$current_employer = '&nbsp;';
+						}
 						?>
-						<p><?php echo esc_html( $current_occupation ); ?></p>
-						<p><?php echo esc_html( $current_employer ); ?></p>
+						<p class="bp-current-occupation"><?php echo esc_html( $current_occupation ); ?></p>
+						<p class="bp-current-employer"><?php echo esc_html( $current_employer ); ?></p>
 
 						<?php
 						if ( true === bp_member_type_enable_disable() && true === bp_member_type_display_on_profile() ) {
