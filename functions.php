@@ -1026,3 +1026,50 @@ add_action('init', 'gp_vc_elements');
 function gp_vc_elements(){
 	include_once(dirname(__FILE__) . "/include/vc-elements.php");
 }
+
+/**
+ * Add Sponsor metabox to blog posts
+ */
+function gp_sponsor_metabox() {
+	add_meta_box( 'gp_sponsorship', 'Sponsorship', 'gp_sponsorship_content', 'post', 'side', 'high' );
+}
+
+/**
+ * Content for the gp_sponsorship metabox
+ */
+function gp_sponsorship_content( $post ) {
+	wp_nonce_field( 'gp_save_sponsorship_data', 'gp_sponsorship_metabox_nonce');
+
+	$value = get_post_meta( $post->ID, '_sponsorship_meta_value_key', true );
+
+	echo '<label for="gp_sponsorship_field"></label>Sponsor Name</label>';
+	echo '<input type="text" id="gp_sponsorship_field" name="gp_sponsorship_field" value="' . esc_attr( $value ) . '">';
+	echo '<p>Enter the name of the sponsor for this post only. If a value is entered into this field, the message "Sponsored by [Sponsor Name]" will be displayed below the blog post&apos;s title.</p>';
+}
+add_action('add_meta_boxes', 'gp_sponsor_metabox');
+
+/**
+ * Saves the Sponshorship data from metabox
+ */
+function gp_save_sponsorship_data( $post_id ) {
+	// Checks to ensure save is permitted
+	if ( ! isset( $_POST['gp_sponsorship_metabox_nonce'] ) ) {
+		return;
+	}
+	if ( ! wp_verify_nonce( $_POST['gp_sponsorship_metabox_nonce'], 'gp_save_sponsorship_data' ) ) {
+		return;
+	}
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+	if( ! isset( $_POST['gp_sponsorship_field'] ) ) {
+		return;
+	}
+
+	$sponsorship = sanitize_text_field( $_POST['gp_sponsorship_field'] );
+	update_post_meta( $post_id, '_sponsorship_meta_value_key', $sponsorship );
+}
+add_action( 'save_post', 'gp_save_sponsorship_data' );
