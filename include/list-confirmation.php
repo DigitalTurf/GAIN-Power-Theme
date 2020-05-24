@@ -66,14 +66,19 @@
 				if(is_single()){
 					
 				?>
+				<style>
+					.listing-second-view .post-meta-info{
+						padding-top: 86px;
+					}
+				</style>
 				<div class="unhidebar-section">
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </div>
 				<div class="lp_confirmation">
 					<div class="widget-box padding-0 lp-border-radius-5">
 						<div class="widget-content">
 				<?php } ?>
-                <div class="lp-confi-bottom-bar"><i class="fa fa-angle-down" aria-hidden="true"></i><?php echo esc_html__( 'Hide This Bar', 'listingpro' ); ?></div>
+                <div class="lp-confi-bottom-bar"><i class="fa fa-angle-up" aria-hidden="true"></i><?php echo esc_html__( 'Hide This Bar', 'listingpro' ); ?></div>
 							<ul class="list-style-none list-st-img">
 								<li>
 									<a class="edit-list" href="<?php echo esc_url($edit_post); ?>">

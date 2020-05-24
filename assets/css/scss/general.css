@@ -3168,9 +3168,16 @@ body.not-home-page.listing-template-default .rating-containter .rating-label {
 body.not-home-page.listing-template-default .form-review-stars .rating-symbol .fa {
   padding-top: 3px;
 }
+body.not-home-page.listing-template-default .unhidebar-section {
+  bottom: auto;
+  margin-top: 83px;
+}
 body.not-home-page.listing-template-default .lp_confirmation {
-  padding: 15px 10px;
+  padding: 10px 10px;
   background-color: rgba(0, 36, 64, 0.77);
+  bottom: auto;
+  margin-top: 83px;
+  z-index: 1;
 }
 body.not-home-page.listing-template-default .lp_confirmation .lp-confi-bottom-bar {
   margin-top: 5px;
@@ -4206,6 +4213,11 @@ body.not-home-page > .select2-container.select2-container--default.select2-conta
     height: 50px;
     width: 100%;
   }
+  body.not-home-page.listing-template-default .unhidebar-section,
+body.not-home-page.listing-template-default .lp_confirmation {
+    margin-top: 65px;
+    top: 0px;
+  }
 
   .md-modal.md-effect-3.md-show#modal-3 {
     display: block;
@@ -4693,6 +4705,11 @@ body.not-home-page section.section-contianer {
   body.not-home-page .container > .row > .col-md-8, body.not-home-page body.not-home-page .container > .row > .col-lg-8 {
     padding-right: 0px;
   }
+  body.not-home-page.listing-template-default .unhidebar-section,
+body.not-home-page.listing-template-default .lp_confirmation {
+    margin-top: 111px;
+    top: 0px;
+  }
 
   body.not-home-page.page-id-11 section.section-contianer {
     padding-top: 110px;
@@ -4766,6 +4783,15 @@ body.not-home-page section.section-contianer {
   }
   body.not-home-page .container .lp-section-content .submit_new_style .lp-form-row-left > p {
     width: calc(100% - 60px);
+  }
+
+  body.not-home-page.listing-template-default .lp-confi-bottom-bar,
+body.not-home-page.listing-template-default .lp_confirmation .edit-list span,
+body.not-home-page.listing-template-default .lp_confirmation li a.lp-pay-publish-btn {
+    font-size: 10px;
+  }
+  body.not-home-page.listing-template-default .lp-confi-bottom-bar {
+    padding-left: 5px !important;
   }
 
   .lp_section_inner .submit_new_style {

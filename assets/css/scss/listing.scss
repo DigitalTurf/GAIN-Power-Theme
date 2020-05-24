@@ -258,9 +258,17 @@ body.not-home-page.listing-template-default {
     }
   }
 
+  .unhidebar-section{
+	bottom: auto;
+	margin-top: 83px;
+  }
+
   .lp_confirmation {
-    padding: 15px 10px;
-    background-color: rgba(0, 36, 64, 0.77);
+    padding: 10px 10px;
+	background-color: rgba(0, 36, 64, 0.77);
+	bottom: auto;
+	margin-top: 83px;
+	z-index: 1;
 
     .lp-confi-bottom-bar {
       margin-top: 5px;
