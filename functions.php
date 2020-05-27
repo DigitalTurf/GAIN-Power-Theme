@@ -115,10 +115,14 @@ add_action( 'add_meta_boxes', 'partisan_verified_meta_box' );
  * Meta box display callbacks.
  */
 function partisan_verified_callback( $post ) {
-    $value = get_post_meta($post->ID, '_partisan_verified_meta_key', true);
+	$value = get_post_meta($post->ID, '_partisan_verified_meta_key', true);
+	$checked = '';
+	if ( 'yes' === $value ) {
+		$checked = ' checked="checked"';
+	}
 ?>
 <label class="toggle-switch" for="partisan-verified">
-    <input name="partisan-verified" id="partisan-verified" type="checkbox" <?php echo (empty($value)) ? '' : 'checked'; ?>>
+    <input name="partisan-verified" id="partisan-verified" type="checkbox" value="yes"<?php echo $checked; ?>>
     <span class="toggle-slider round"></span>
 </label><br>
 <small>Toggle this switch to show/hide the partisan verification icon on this listing.</small>
@@ -129,13 +133,15 @@ function partisan_verified_callback( $post ) {
  * Save meta box content.
  */
 function partisan_verified_save_callback( $post_id ) {
-    if (array_key_exists('partisan-verified', $_POST)) {
+    if (isset($_POST['partisan-verified'])) {
         update_post_meta(
             $post_id,
             '_partisan_verified_meta_key',
             $_POST['partisan-verified']
         );
-    }
+    } else {
+		delete_post_meta( $post_id, '_partisan_verified_meta_key' );
+	}
 }
 add_action( 'save_post', 'partisan_verified_save_callback' );
 

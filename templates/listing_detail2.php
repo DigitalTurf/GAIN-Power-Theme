@@ -28,7 +28,8 @@ if ( have_posts() ) {
         $faqs_show = get_post_meta( $plan_id, 'listingproc_faq', true );
         $price_show = get_post_meta( $plan_id, 'listingproc_price', true );
         $tags_show = get_post_meta( $plan_id, 'listingproc_tag_key', true );
-        $hours_show = get_post_meta( $plan_id, 'listingproc_bhours', true );
+		$hours_show = get_post_meta( $plan_id, 'listingproc_bhours', true );
+		$partisan_show = get_post_meta( $post->ID, '_partisan_verified_meta_key', true );
 
         if($plan_id=="none"){
             $contact_show = 'true';
@@ -47,12 +48,20 @@ if ( have_posts() ) {
 
         $claim = '';
         if($claimed_section == 'claimed') {
-            $claim = '<span style="white-space:nowrap" class="claimed"><i class="fas fa-check"></i> '. esc_html__('Claimed', 'listingpro').'</span>';
+			$claim = '<span style="white-space:nowrap" class="claimed"><i class="fas fa-check"></i> '. esc_html__('Claimed', 'listingpro').'</span>';
 
         }elseif($claimed_section == 'not_claimed') {
             $claim = '';
 
-        }
+		}
+		
+		$partisan = '';
+		if ( 'yes' === $partisan_show ) {
+			$partisan = '<span class="partisan">D</span>';
+		}
+
+		$claim = $claim . $partisan;
+
         global $post;
 
         $resurva_url = get_post_meta($post->ID, 'resurva_url', true);

@@ -3366,6 +3366,20 @@ body.not-home-page.listing-template-default .listing-second-view span.claimed {
   font-size: 12px !important;
   font-weight: normal !important;
 }
+body.not-home-page.listing-template-default .listing-second-view span.partisan {
+  border-radius: 25px;
+  height: 25px;
+  line-height: 20px;
+  width: 25px;
+  display: inline-block;
+  color: #40B3EF;
+  font-weight: bold;
+  border: 3px solid #40B3EF;
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 8px;
+}
 body.not-home-page.listing-template-default .listing-second-view .post-meta-right-box {
   color: #fff !important;
 }
