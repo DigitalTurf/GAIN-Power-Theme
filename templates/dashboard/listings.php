@@ -52,7 +52,7 @@
 			}
 			/* ends here */
 ?>
-<h1>My Listings</h1>
+<h1>My <?php echo esc_html( ucfirst( lp_theme_option( 'listing_public_name' ) ) ); ?>s</h1>
 <?php
 	$args = [
 			'menu'              => 71,
